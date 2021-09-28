@@ -1,4 +1,4 @@
-##Debug with Kudu
+## Debug with Kudu
 
 Many startup errors do not log any usefull information. At this time you can use the *kudu* tool, which is located under the Advanced Tools.
 
