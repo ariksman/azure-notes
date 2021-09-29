@@ -1,6 +1,9 @@
 ## azure-notes
 Personal notes
 
+## Azure Service-Principal
+
+
 ## Common
 
 [Invoke Azure REST API with curl](common/rest-curl.md)
