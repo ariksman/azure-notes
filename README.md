@@ -3,6 +3,8 @@ Personal notes
 
 ## Azure Service-Principal
 
+[Create service principal via Azure DevOps](service-principal/create_sp_via_devops.md)
+
 
 ## Common
 
