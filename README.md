@@ -1,5 +1,6 @@
 ## azure-notes
-Personal notes
+
+All notes related to Azure.
 
 ## Azure Service-Principal
 
