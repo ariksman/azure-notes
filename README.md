@@ -13,6 +13,6 @@ All notes related to Azure.
 
 [Use kudu for debugging start-up errors](common/debug_AppService.md)
 
-## Biceo
+## Bicep
 
 [General links and tips](bicep/bicep.md)
