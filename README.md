@@ -19,4 +19,4 @@ All notes related to Azure.
 
 ## C#
 
-[Batch items](csharp/batch.md)
+[Batch items](sharp/batch.md)
