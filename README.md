@@ -16,3 +16,7 @@ All notes related to Azure.
 ## Bicep
 
 [General links and tips](bicep/bicep.md)
+
+## C#
+
+[Batch items](csharp/batch.md)
