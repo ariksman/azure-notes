@@ -1,8 +1,8 @@
 # Batch items
 
-Extension for batching https://github.com/morelinq/MoreLINQ/blob/master/MoreLinq/Batch.cs
+Generic extension for batching https://github.com/morelinq/MoreLINQ/blob/master/MoreLinq/Batch.cs
 
-Simple approach:
+## Simple approach:
 ```csharp
 public static IEnumerable<IEnumerable<T>> Batch<T>(this IEnumerable<T> collection, int batchSize)
 {
