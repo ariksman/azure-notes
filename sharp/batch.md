@@ -1,6 +1,6 @@
 # Batch items
 
-Generic extension for batching https://github.com/morelinq/MoreLINQ/blob/master/MoreLinq/Batch.cs
+[Generic extension for batching](https://github.com/morelinq/MoreLINQ/blob/master/MoreLinq/Batch.cs)
 
 ## Simple approach:
 ```csharp
