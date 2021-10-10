@@ -20,7 +20,7 @@ Put the **Authorization** header in the request and call curl. For example,
 [Application Gateways - Get](https://docs.microsoft.com/en-us/rest/api/application-gateway/applicationgateways/get):
 
 ```
-curl "https://management.azure.com/subscriptions/466bc02a-1e06-45b4-9241-395b32d2094c/resourceGroups/jlrg1/providers/Microsoft.Network/applicationGateways/jlwaag?api-version=2017-10-01" -H "Authorization:Bearer eyJ0eX..." -H "Content-Type:application/json" -o output.json -D - -s
+curl "GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}?api-version=2021-03-01" -H "Authorization:Bearer eyJ0eX..." -H "Content-Type:application/json" -o output.json -D - -s
 ```
 
 It saves the response to output.json. Then we can do some changes and PUT it back.
@@ -28,7 +28,7 @@ It saves the response to output.json. Then we can do some changes and PUT it bac
 [Application Gateways - Create Or Update](https://docs.microsoft.com/en-us/rest/api/application-gateway/applicationgateways/createorupdate):
 
 ```
-curl -X PUT "https://management.azure.com/subscriptions/466bc02a-1e06-45b4-9241-395b32d2094c/resourceGroups/jlrg1/providers/Microsoft.Network/applicationGateways/jlwaag?api-version=2017-10-01" -H "Authorization:Bearer eyJ0eX..." -H "Content-Type:application/json" -d "@output.json" -D - -s
+curl -X PUT "PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}?api-version=2021-03-01" -H "Authorization:Bearer eyJ0eX..." -H "Content-Type:application/json" -d "@output.json" -D - -s
 ```
 
 Parameters:
