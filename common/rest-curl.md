@@ -39,7 +39,3 @@ Parameters:
 ```
 
 Note: If the token is too long, exceeding the limit of a console command, use **Postman** or **Fiddler** instead.
-
-## References
-
-curl download: https://curl.haxx.se/download.html
