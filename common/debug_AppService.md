@@ -11,3 +11,8 @@ CD wwwroot
 DIR // to list contents. Find your dll in the list to ensure you are in the right location.
 DOTNET your.dll
 ```
+
+Check the runtime version:
+```
+$ dotnet --list-runtimes
+```
