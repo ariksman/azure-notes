@@ -20,3 +20,7 @@ All notes related to Azure.
 ## C#
 
 [Batch items](sharp/batch.md)
+
+## react
+
+[Renderer prop pattern](react/renderPropPattern.md)
