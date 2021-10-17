@@ -12,6 +12,7 @@ All notes related to Azure.
 [Invoke Azure REST API with curl](common/rest-curl.md)
 
 [Use kudu for debugging start-up errors](common/debug_AppService.md)
+[Register Azure SDK clients for ASP.NET Core app](common/azure-sdk-clients.md)
 
 ## Bicep
 
