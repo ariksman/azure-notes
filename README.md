@@ -6,6 +6,8 @@ All notes related to Azure.
 
 [Create service principal via Azure DevOps](service-principal/create_sp_via_devops.md)
 
+## Application insights
+[Common use-cases for AI](application-insights/ai.md)
 
 ## Common
 
