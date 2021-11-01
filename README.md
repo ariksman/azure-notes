@@ -26,5 +26,6 @@ All notes related to Azure.
 [Batch items](sharp/batch.md)
 
 ## React.js
+[Direct link to TypeScript docs](https://www.typescriptlang.org/docs/)
 
 [Renderer prop pattern](react/renderPropPattern.md)
