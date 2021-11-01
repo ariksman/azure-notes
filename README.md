@@ -25,6 +25,6 @@ All notes related to Azure.
 
 [Batch items](sharp/batch.md)
 
-## react
+## React.js
 
 [Renderer prop pattern](react/renderPropPattern.md)
