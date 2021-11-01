@@ -1,6 +1,6 @@
 ## Development-Notes
 
-All notes related to Azure.
+All notes related to Azure, C#, react and devOps.
 
 ## Azure Service-Principal
 
