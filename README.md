@@ -29,5 +29,7 @@ All notes related to Azure, C#, react and devOps.
 
 [Renderer prop pattern](react/renderPropPattern.md)
 
+[Functional component basics](react/functional-components.md)
+
 ## TypeScript
 [Direct link to TypeScript docs](https://www.typescriptlang.org/docs/)
