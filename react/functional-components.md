@@ -1,4 +1,6 @@
 
+### Simple example
+
 Declaring type of props
 
 ```
@@ -20,4 +22,36 @@ const App = ({ message }: AppProps): JSX.Element => <div>{message}</div>;
 you can also inline the type declaration; eliminates naming the prop types, but looks repetitive
 ```
 const App = ({ message }: { message: string }) => <div>{message}</div>;
+```
+
+### Example of functional component declaration
+With `FunctionComponent`
+```
+import React, { FC, useState } from 'react';
+
+export interface ISuppliersTreeViewProps {
+  onSupplierSelected: (documentNumber: number) => void;
+}
+
+const SuppliersTreeView: FC<ISuppliersTreeViewProps> = ({ onSupplierSelected }: ISuppliersTreeViewProps) => {
+  const classes = useStyles();
+  const { isLoading, isFetching, data } = useFetchSuppliers();
+  const [expanded, setExpanded] = useState([]);
+  const [selected, setSelected] = useState<string>();
+```
+
+Or with `type`definition:
+```
+import React, { FC, useState } from 'react';
+
+type SuppliersTreeViewProps = {
+  onSupplierSelected: (documentNumber: number) => void;
+};
+
+const SuppliersTreeView: FC<SuppliersTreeViewProps> = ({ onSupplierSelected }: SuppliersTreeViewProps) => {
+  const classes = useStyles();
+  const { isLoading, isFetching, data } = useFetchSuppliers();
+  const [expanded, setExpanded] = useState([]);
+  const [selected, setSelected] = useState<string>();
+
 ```
