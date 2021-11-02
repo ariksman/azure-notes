@@ -16,7 +16,7 @@ listKeyValue
 ```
 The actual result varies depending of the underlying resource. 
 
-#### Storage account
+### Storage account
 
 For example in-case of a storage account, the access is in following format.
 ```
@@ -26,7 +26,7 @@ Note the response format `keys[0].value` used with the `listKeys` function is ba
 
 <img src="azureStorageAccountListKeysResponse.png" width="600" />
 
-#### Azure PubSub service
+### Azure PubSub service
 
 
 
