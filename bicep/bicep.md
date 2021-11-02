@@ -6,14 +6,16 @@
 
 ### Bicep resource functions
 
--[Resource functions for Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-resource)
+- [Resource functions for Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-resource)
 
 Above resource functions such as:
 ```
 list
 listKeys
 listKeyValue
-
-The actual rsult varies depending of the underlying resource. For example storage account the access is in format:
+```
+The actual rsult varies depending of the underlying resource. For example storage account the access is in format. Note the response format utilized with the `listKeys` function
 ```
 listKeys(resourceId, apiVersion).Keys[0].Value
+```
+<img src="azureStorageAccountListKeysResponse.png" width="600" />
