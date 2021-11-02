@@ -4,7 +4,7 @@
 - [Most recent community calls available at youtube](https://www.youtube.com/channel/UCZZ3-oMrVI5ssheMzaWC4uQ/videos)
 
 
-### Bicep resource functions
+## Bicep resource functions
 
 - [Resource functions for Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-resource)
 
