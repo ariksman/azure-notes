@@ -16,8 +16,8 @@ listKeyValue
 ```
 The actual result varies depending of the underlying resource. For example in-case of a storage account, the access is in following format.
 ```
-listKeys(resourceId, apiVersion).Keys[0].Value
+listKeys(resourceId, apiVersion).keys[0].value
 ```
-Note the response format `Keys[0].Value` used with the `listKeys` function is based on the resource REST API response:
+Note the response format `keys[0].value` used with the `listKeys` function is based on the resource REST API response:
 
 <img src="azureStorageAccountListKeysResponse.png" width="600" />
