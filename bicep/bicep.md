@@ -28,9 +28,11 @@ Note the response format `keys[0].value` used with the `listKeys` function is ba
 
 ### Azure PubSub service
 
+Service response to the `listKeys` function is following:
 
+<img src="azurePubSubListKeysResponse.png" width="600" />
 
-To store these secrets into keyvault:
+To access and store these secrets into keyvault use the following:
 
 ```
 resource pubSubConnectionString 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = if (!empty(naming.webPubSub)) {
