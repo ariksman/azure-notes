@@ -14,10 +14,36 @@ list
 listKeys
 listKeyValue
 ```
-The actual result varies depending of the underlying resource. For example in-case of a storage account, the access is in following format.
+The actual result varies depending of the underlying resource. 
+
+#### Storage account
+
+For example in-case of a storage account, the access is in following format.
 ```
 listKeys(resourceId, apiVersion).keys[0].value
 ```
 Note the response format `keys[0].value` used with the `listKeys` function is based on the resource REST API response:
 
 <img src="azureStorageAccountListKeysResponse.png" width="600" />
+
+#### Azure PubSub service
+
+
+
+To store these secrets into keyvault:
+
+```
+resource pubSubConnectionString 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = if (!empty(naming.webPubSub)) {
+  name: '${keyVault.name}/AzurePubSub--ConnectionString'
+  properties: {
+    value: listKeys(resourceId('Microsoft.SignalRService/WebPubSub', naming.webPubSub), '2021-09-01-preview').primaryConnectionString
+  }
+}
+
+resource pubSubPrimaryKey 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = if (!empty(naming.webPubSub)) {
+  name: '${keyVault.name}/AzurePubSub--PrimaryKey'
+  properties: {
+    value: listKeys(resourceId('Microsoft.SignalRService/WebPubSub', naming.webPubSub), '2021-09-01-preview').primaryKey
+  }
+}
+
