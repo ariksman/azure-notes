@@ -4,6 +4,7 @@ All notes related to Azure, C#, react and devOps.
 
 ## Azure resource notes
 [Azure PubSub](azure-resources/azure-pubsub/azurePubSub.md)
+
 [Application Insights](azure-resources/application-insights/application-insights.md)
 
 ## Azure Service-Principal
