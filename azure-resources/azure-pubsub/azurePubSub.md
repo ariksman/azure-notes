@@ -5,3 +5,5 @@
 
 [Demo for testing deployed service](https://azure.github.io/azure-webpubsub/demos/clientpubsub)
 
+[Example chat platform with Auth](https://github.com/benc-uk/chatr)
+
