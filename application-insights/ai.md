@@ -1,6 +1,6 @@
-# Application Insights
+## Application Insights
 
-# Query traces = LogInformation
+## Query traces = LogInformation
 
 When logging information at the backend code with `logger.LogInformation` it will be available via Application Insights traces.
 ```
