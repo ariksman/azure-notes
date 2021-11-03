@@ -1,4 +1,4 @@
-## Application Insights
+## <img src="azureApplicationInsights.png" width="60" />Application Insights
 
 ## Query traces = LogInformation
 
