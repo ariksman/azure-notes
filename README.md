@@ -3,7 +3,7 @@
 All notes related to Azure, C#, react and devOps.
 
 ## Azure rsource notes
-[Azure PubSub](azurePubSub/azurePubSubNotes.md)
+[Azure PubSub](azure-resources/azurePubSub/azurePubSub.md)
 
 ## Azure Service-Principal
 
