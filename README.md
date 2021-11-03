@@ -2,6 +2,9 @@
 
 All notes related to Azure, C#, react and devOps.
 
+## Azure rsource notes
+[Azure PubSub](azurePubSub/azurePubSubNotes.md)
+
 ## Azure Service-Principal
 
 [Create service principal via Azure DevOps](service-principal/create_sp_via_devops.md)
