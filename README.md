@@ -2,15 +2,13 @@
 
 All notes related to Azure, C#, react and devOps.
 
-## Azure rsource notes
+## Azure resource notes
 [Azure PubSub](azure-resources/azure-pubsub/azurePubSub.md)
+[Application Insights](azure-resources/application-insights/ai.md)
 
 ## Azure Service-Principal
 
 [Create service principal via Azure DevOps](service-principal/create_sp_via_devops.md)
-
-## Application insights
-[Common use-cases for AI](application-insights/ai.md)
 
 ## Common
 
