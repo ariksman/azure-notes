@@ -1,5 +1,5 @@
 Input props take in the **generic item T**, renderer prop <https://reactjs.org/docs/render-props.html> and function to filter items vefore they are displayed.
-```
+``` TypeScript
 interface PropsType<T> {
   items: T[];
   renderer: (item: T) => React.ReactNode;
@@ -8,7 +8,7 @@ interface PropsType<T> {
 ```
 
 Interface indicates the input data must have a **key**
-```
+``` TypeScript
 interface AbstractItem {
   key: string;
 }
@@ -16,7 +16,7 @@ interface AbstractItem {
 
 Below code uses render prop pattern and utilizes the ability to have access to the raw item data by **filtering** the data before it is displayed.
 
-```
+``` TypeScript
 import * as React from "react";
 
 interface PropsType<T> {
@@ -47,7 +47,8 @@ export default function FilterableListView<T extends AbstractItem>(
 ```
 
 And the list can used in a following manner:
-```
+
+``` TypeScript
 <FilterableListView
   items={[
     { key: "foo", name: "foo", value: 11 },
