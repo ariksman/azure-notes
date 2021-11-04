@@ -74,7 +74,7 @@ Inject client to a service and send messages to all:
 
 ## Test client program
 
-To test retrieve these messages from Azure use following program providedprovided by [microsoft tutorial](https://docs.microsoft.com/en-us/azure/azure-web-pubsub/tutorial-pub-sub-messages?tabs=csharp):
+To test retrieve these messages from Azure the following console program provided by [microsoft tutorial](https://docs.microsoft.com/en-us/azure/azure-web-pubsub/tutorial-pub-sub-messages?tabs=csharp) can be used:
 
 ``` Csharp
   class Program
