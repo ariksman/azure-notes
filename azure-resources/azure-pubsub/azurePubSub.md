@@ -33,7 +33,7 @@ To register the `WebPubSubServiceClient` for ASP.NET Core dependency injection.
     }
 ```
 
-Define the required information within `appsettings.json`(only for testing) or in keyvault:
+Define the required information within `appsettings.json` (only for testing) or in keyvault:
 ``` Csharp
 {
   "AzurePubSub": {
@@ -44,7 +44,7 @@ Define the required information within `appsettings.json`(only for testing) or i
 ```
 
 
-Inject client to a service:
+Inject client to a service and send messages to all:
 
 ``` Csharp
     public class SomeService
