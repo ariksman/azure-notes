@@ -11,7 +11,7 @@
 
 When sending messages to Azure PubSub with:
 
-```
+``` Csharp
 var response = await _pubSubServiceClient.SendToAllAsync(messageString, ContentType.ApplicationJson);
 ```
 
