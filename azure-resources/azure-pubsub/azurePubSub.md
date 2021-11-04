@@ -33,7 +33,7 @@ To register the `WebPubSubServiceClient` for ASP.NET Core dependency injection.
     }
 ```
 
-Define the required information within `appsettings.json` or in keyvault:
+Define the required information within `appsettings.json`(only for testing) or in keyvault:
 ``` Csharp
 {
   "AzurePubSub": {
