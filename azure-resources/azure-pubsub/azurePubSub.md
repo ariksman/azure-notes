@@ -7,13 +7,69 @@
 
 [Example chat platform with Auth](https://github.com/benc-uk/chatr)
 
-## Test client program
+## Using WebPubSubServiceClient to send messages
 
-When sending messages to Azure PubSub with:
+To register the `WebPubSubServiceClient` for ASP.NET Core dependency injection.
 
 ``` Csharp
-var response = await _pubSubServiceClient.SendToAllAsync(messageString, ContentType.ApplicationJson);
+    internal class AzurePubSubOptions
+    {
+        public string ConnectionString { get; set; }
+        public string HubName { get; set; }
+    }
+    
+    internal static class WebPubSubFeatureExtensions
+    {
+        internal static void AddWebPubSubServices(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<AzurePubSubOptions>(configuration.GetSection("AzurePubSub"));
+            services.AddAzureClients(builder =>
+            {
+                var options = new AzurePubSubOptions();
+                configuration.GetSection("AzurePubSub").Bind(options);
+                builder.AddWebPubSubServiceClient(options.ConnectionString, options.HubName);
+            });
+        }
+    }
 ```
+
+Define the required information within `appsettings.json` or in keyvault:
+``` Csharp
+{
+  "AzurePubSub": {
+    "ConnectionString": "<ConnectionString>",
+    "HubName": "<HubName>"
+  }
+}
+```
+
+
+Inject client to a service:
+
+``` Csharp
+    public class SomeService
+    {
+        private readonly WebPubSubServiceClient _pubSubServiceClient;
+
+        public SomeService(WebPubSubServiceClient pubSubServiceClient)
+        {
+            _pubSubServiceClient = pubSubServiceClient;
+        }
+
+        public async Task SendMessageAsync()
+        {
+            var telemetryDataPoint = new
+            {
+                temp = 123,
+            };
+            
+            var messageString = JsonSerializer.Serialize(telemetryDataPoint);
+            var response = await _pubSubServiceClient.SendToAllAsync(messageString, ContentType.ApplicationJson);
+        }
+    }
+```
+
+## Test client program
 
 To test retrieve these messages from Azure use following program providedprovided by [microsoft tutorial](https://docs.microsoft.com/en-us/azure/azure-web-pubsub/tutorial-pub-sub-messages?tabs=csharp):
 
