@@ -15,7 +15,7 @@ When sending messages to Azure PubSub with:
 var response = await _pubSubServiceClient.SendToAllAsync(messageString, ContentType.ApplicationJson);
 ```
 
-Receiving og these messages to the Azure, can be tested with following program:
+To test retrieve these messages from Azure use following program providedprovided by [microsoft tutorial](https://docs.microsoft.com/en-us/azure/azure-web-pubsub/tutorial-pub-sub-messages?tabs=csharp):
 
 ``` Csharp
   class Program
