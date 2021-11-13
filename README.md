@@ -7,6 +7,8 @@ All notes related to Azure, C#, react and devOps.
 
 [Application Insights](azure-resources/application-insights/application-insights.md)
 
+[Alerts with AI](azure-resources/application-insights/azure-ai-alerts.md)
+
 ## Azure Service-Principal
 
 [Create service principal via Azure DevOps](service-principal/create_sp_via_devops.md)
