@@ -16,6 +16,12 @@ properties: new Dictionary<string, string>()
 });
 ```
 
+And the `TelemetryClient` can be registered for example to functions:
+``` CSharp
+builder.Services.AddSingleton(new TelemetryClient(telemetryConfiguration));
+```
+
+
 Automate deployment of this alert rule via `bicep`
 
 ``` bicep
