@@ -55,3 +55,7 @@ const SuppliersTreeView: FC<SuppliersTreeViewProps> = ({ onSupplierSelected }: S
   const [selected, setSelected] = useState<string>();
 
 ```
+
+### Hooks related links
+
+https://overreacted.io/making-setinterval-declarative-with-react-hooks/
