@@ -18,11 +18,11 @@ internal static void InitializeLogger(this LoggerConfiguration loggerConfigurati
 }
 ```
 
-```
+``` Kusto
 traces | where message startswith "Search string to look for.." | order by timestamp desc
 ```
 It is possible to group-by alsi for advanced queries:
-```
+``` Kusto
 traces | where operation_Name == 'Receiver' | where message startswith "Upserted the Entity" | order by timestamp desc ;
 
 traces | where operation_Name == 'Receiver' | where message startswith "Processing Entity" | order by timestamp desc ;
