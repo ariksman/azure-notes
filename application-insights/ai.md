@@ -34,7 +34,7 @@ traces | where operation_Name == 'Receiver'| where message startswith "Processed
 
 ```
 
-## KQL Tips
+## KQL search tips
 
 To search exceptions custom dimensions when the `EventId` is an object and we want to search for matching `Id` within this object.
 ``` Kusto
