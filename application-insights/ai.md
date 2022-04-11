@@ -33,3 +33,21 @@ traces | where operation_Name == 'Receiver'| where message startswith "Processed
 | summarize count() by tostring(customDimensions.prop__rootName)
 
 ```
+
+## KQL Tips
+
+To search exceptions custom dimensions when the `EventId` is an object and we want to search for matching `Id` within this object.
+``` KQL
+exceptions
+| extend eventId = todynamic(tostring(customDimensions.EventId))
+| extend id = eventId.Id
+| where id == 3001 or id == 2001
+
+OR
+
+exceptions
+| extend eventId = todynamic(tostring(customDimensions.EventId))
+| extend id = eventId.Id
+| where id == 3001 or id == 2001 or id == 1001
+```
+
