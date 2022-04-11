@@ -2,7 +2,22 @@
 
 ## Query traces = LogInformation
 
-When logging information at the backend code with `logger.LogInformation` it will be available via Application Insights traces.
+When logging information at the backend code with `logger.LogInformation` it will be available via Application Insights **traces** if we have configured the `SeriLog` to do this.
+
+``` CSharp
+internal static void InitializeLogger(this LoggerConfiguration loggerConfiguration, WebHostBuilderContext hostingContext)
+{
+    var serilogSettings = new SerilogSettings(hostingContext.Configuration);
+    loggerConfiguration
+        .ReadFrom.Configuration(hostingContext.Configuration)
+        .Enrich.FromLogContext()
+        .Enrich.WithProperty("Application", "Gateway.Api")
+        .WriteTo.Console(theme: SystemConsoleTheme.Colored)
+        .WriteTo.Trace()
+        .WriteTo.ApplicationInsights(serilogSettings.InstrumentationKey, TelemetryConverter.Traces);
+}
+```
+
 ```
 traces | where message startswith "Search string to look for.." | order by timestamp desc
 ```
