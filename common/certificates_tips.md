@@ -6,7 +6,7 @@ To quickly debug locally the certificate, the user-secrets can be leveraged with
 ## Method 1: Obtain cert string value
 
 Following commands extract the `string` value and store it within a txt-file.
-[Aget-content command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.2):
+[get-content command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.2):
 
 ``` PowerShell
 PS > $fileContentBytes = get-content '.\CN=OAuth2_CertFile_DEV.pfx' -Encoding Byte
