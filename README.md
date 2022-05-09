@@ -13,6 +13,14 @@ All notes related to Azure, C#, react and devOps.
 
 [Create service principal via Azure DevOps](service-principal/create_sp_via_devops.md)
 
+## Bicep
+
+[General links and tips](bicep/bicep.md)
+
+## Certificates
+
+[Certificate to base64 encoded string value](common/certificates_tips.md)
+
 ## Common
 
 [Invoke Azure REST API with curl](common/rest-curl.md)
@@ -22,10 +30,6 @@ All notes related to Azure, C#, react and devOps.
 [Register Azure SDK clients for ASP.NET Core app](common/azure-sdk-clients.md)
 
 [Certificate to base64 encoded string value](common/certificates_tips.md)
-
-## Bicep
-
-[General links and tips](bicep/bicep.md)
 
 ## C#
 
