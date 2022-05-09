@@ -21,6 +21,8 @@ All notes related to Azure, C#, react and devOps.
 
 [Register Azure SDK clients for ASP.NET Core app](common/azure-sdk-clients.md)
 
+[Certificate to base64 encoded string value](common/certificates_tips.md)
+
 ## Bicep
 
 [General links and tips](bicep/bicep.md)
