@@ -4,6 +4,31 @@
 
 ## Create Graph API client via secret or cert
 
+Example of `appsettings.json`
+``` Json
+"AzureAd": {
+    "ClientId": "", // Application Id
+    "TenantId": "", // Tenant / organization Id
+    "ClientSecret": "", // If using passwrod
+    "Certificate": "" // If using certificate
+}
+
+```
+
+``` CSharp
+internal static class AppSettings
+{
+    public static class AzureAd
+    {
+        public const string ClientId = "AzureAd:ClientId";
+        public const string TenantId = "AzureAd:TenantId";
+        public const string ClientSecret = "AzureAd:ClientSecret";
+        public const string Certificate = "AzureAd:Certificate";
+    }
+}
+```
+
+Example code for graph client cration
 ``` CSharp
 var clientId = configuration[AppSettings.AzureAd.ClientId];
 var tenantId = configuration[AppSettings.AzureAd.TenantId];
