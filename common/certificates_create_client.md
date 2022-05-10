@@ -66,11 +66,11 @@ var graphClient = new GraphServiceClient(
     }));
 ```
 
-## For admin consent issues
+## Tenant wide admin consent
 
 Grant global consent
 ```
 https://login.microsoftonline.com/{tenant-id}/adminconsent?client_id={client-id}
 ```
 
-[Microsoft guide](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/grant-admin-consent#construct-the-url-for-granting-tenant-wide-admin-consent)
+[Construct the URL for granting tenant-wide admin consent](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/grant-admin-consent#construct-the-url-for-granting-tenant-wide-admin-consent)
