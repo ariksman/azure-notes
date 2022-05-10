@@ -65,3 +65,10 @@ var graphClient = new GraphServiceClient(
         requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", authResult.AccessToken);
     }));
 ```
+
+## For admin consent issues
+
+Try out directly logging into the app registration:
+```
+https://login.microsoftonline.com/[tenantId]/oauth2/authorize?client_id=[AppId]&response_type=code&redirect_uri=sample://callback&nonce=1234&resource=https://graph.windows.net&prompt=admin_consent
+```
