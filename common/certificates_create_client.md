@@ -68,7 +68,7 @@ var graphClient = new GraphServiceClient(
 
 ## Tenant wide admin consent
 
-AS Tenant admin, grant global consent via this link
+As tenant admin, grant global consent via this link
 ```
 https://login.microsoftonline.com/{tenant-id}/adminconsent?client_id={client-id}
 ```
