@@ -1,7 +1,7 @@
 ### Use certificates automatic deployment to keyvault
 
 
-Pipeline task to initiate the deployment. It is a good habit to provide the `keyvaultName` and `graphApiCertName` as ARM / Bicep output parameter. This allows you to deploy based on environments `dev/qa/prod`.
+Pipeline task to initiate the deployment. It is a good habit to provide the `keyvaultName` and `graphApiCertName` as ARM / Bicep output parameters and then parse these into accessible pipeline variables during deployment. This allows you to deploy based on environments `dev/qa/prod`. The certificate is stored within the git repository, and password into devops library via name: `api-app-registration-client-certificate-password`
 
 ``` Yml
 - task: AzurePowerShell@5
