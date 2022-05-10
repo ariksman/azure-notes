@@ -29,11 +29,11 @@ All notes related to Azure, C#, react and devOps.
 
 [Register Azure SDK clients for ASP.NET Core app](common/azure-sdk-clients.md)
 
-[Create Graph API client](common/certificates_create_client.md)
-
 ## C#
 
 [Batch items](sharp/batch.md)
+
+[Create Graph API client](sharp/create_graph_client.md)
 
 ## React.js
 
