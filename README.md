@@ -21,6 +21,8 @@ All notes related to Azure, C#, react and devOps.
 
 [Certificate to base64 encoded string value](common/certificates_tips.md)
 
+[Deploy certificate via pipeline](common/deploy_certificates_with_pipelines.md)
+
 ## Common
 
 [Invoke Azure REST API with curl](common/rest-curl.md)
