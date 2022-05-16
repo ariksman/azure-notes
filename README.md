@@ -35,6 +35,8 @@ All notes related to Azure, C#, react and devOps.
 
 [Create Graph API client](sharp/create_graph_client.md)
 
+[Permissions](graph-api/permissions.md)
+
 ## C#
 
 [Batch items](sharp/batch.md)
