@@ -14,8 +14,4 @@ PS > [System.Convert]::ToBase64String($fileContentBytes) | Out-File 'pfx-encoded
 ```
 
 This can be stored as a string into the projects user-secrets.
-Also on the user-secret remember to add `\n` at the end of copied string.
 
-``` JSON
-  "cert": "CERTSTRING\n" <---- \n added at the end
-```
