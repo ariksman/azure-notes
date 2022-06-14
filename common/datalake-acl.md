@@ -12,3 +12,8 @@ $fullAcl="user:objectId:rwx,default:user:objectId:rwx"
 $newFullAcl = $fullAcl.Split(",")
 Remove-AzDataLakeStoreItemAclEntry -AccountName "DataLakeResourceName" -Path / -Acl $newFullAcl -Recurse -ShowProgress -Verbose
 ```
+
+To get folders current ACLs
+``` Powershell
+Get-AzDataLakeStoreItemAclEntry -Account "DataLakeResourceName" -Path /
+```
