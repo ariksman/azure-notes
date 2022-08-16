@@ -13,6 +13,7 @@ All notes related to Azure, C#, react and devOps.
 
 [Create SAS token for storage account blob via APIM and return valid download URL](apim/storageAccountSasToken.md)
 
+[Add Bearer token validation via APIM policy](apim/bearerTokenValidation.md)
 
 ## Azure Service-Principal
 
