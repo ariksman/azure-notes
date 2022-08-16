@@ -1,6 +1,18 @@
 It is possible to directly create a SAS token for storage account file via api-management policys
 
 The `storage-accountkey` and `storage-accountname` can be stored within the apim `named values` as secrets and accessed from the policy.
+
+If one want to fetch the container and blob name from `GET` request, the following syntax enables this approach
+
+```
+GET /generate/sas/{containerName}/{blobName}
+```
+``` XML
+<set-variable name="containerName" value="@(context.Request.MatchedParameters["containerName"])" />
+<set-variable name="blobName" value="@(context.Request.MatchedParameters["blobName"])" />
+```
+
+Example below uses static container and blob names.
 ``` XML
 <!-- extract parameters from URL or use static values -->
 <set-variable name="containerName" value="{ContainerNameWithinStorageAccount}" />
