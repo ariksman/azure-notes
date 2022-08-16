@@ -9,6 +9,11 @@ All notes related to Azure, C#, react and devOps.
 
 [Automated alerts with AI](azure-resources/application-insights/automated-ai-alerts.md)
 
+## API Management
+
+[Create SAS token for storage account blob via APIM and return valid download URL](apim/storageAccountSasToken.md)
+
+
 ## Azure Service-Principal
 
 [Create service principal via Azure DevOps](service-principal/create_sp_via_devops.md)
