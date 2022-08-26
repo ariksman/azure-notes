@@ -1,5 +1,5 @@
 
-Add the WebApp or FunctionApp correct rights to access the Storage account Blob
+Add the WebApp or FunctionApp correct rights to access the Storage account Blob. The access required to read and write data is: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-owner
 
 ``` json
 "variables": {
