@@ -11,6 +11,9 @@ All notes related to Azure, C#, react and devOps.
 
 [Access storage account via managed identity ARM](azure-resources/storage-account/access_via_managed_identity.md)
 
+## Azure.Identity
+
+[Tips how to use the Azure.Identity package](azure-identity/identity-package-usage-tips.md)
 
 ## API Management
 
