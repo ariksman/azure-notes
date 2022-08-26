@@ -1,7 +1,7 @@
 
 Add the WebApp or FunctionApp correct rights to access the Storage account Blob
 
-``` xml
+``` json
 "variables": {
   "containerName": "itemsexported",
   "storageBlobContributorRoleId": "[concat(subscription().Id, '/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe')]"
@@ -9,7 +9,7 @@ Add the WebApp or FunctionApp correct rights to access the Storage account Blob
 ```
 
 Example storage account
-``` xml
+``` json
 {
   "name": "[parameters('storageAccount')]",
   "type": "Microsoft.Storage/storageAccounts",
@@ -26,7 +26,7 @@ Example storage account
 ```
 
 Define access rights for `functionApp` to access `containerName` within storage account
-``` xml
+``` json
 {
   "type": "Microsoft.Storage/storageAccounts/blobServices/containers/providers/roleAssignments",
   "apiVersion": "2021-06-01",
