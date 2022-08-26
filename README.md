@@ -9,6 +9,9 @@ All notes related to Azure, C#, react and devOps.
 
 [Automated alerts with AI](azure-resources/application-insights/automated-ai-alerts.md)
 
+[Access storage account via managed identity ARM](azure-resources/storage-account/access_via_managed_identity.md)
+
+
 ## API Management
 
 [Create SAS token for storage account blob via APIM and return valid download URL](apim/storageAccountSasToken.md)
