@@ -41,5 +41,4 @@ Define access rights for `functionApp` to access `containerName` within storage 
     "roleDefinitionId": "[variables('storageBlobContributorRoleId')]"
   }
 },
-},
 ```
