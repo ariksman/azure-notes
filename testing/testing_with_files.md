@@ -19,10 +19,17 @@ public static Stream GetEmbeddedResourceStream(this Assembly assembly, string re
     return stream;
 }
 ```
+Add files as embedded resources:
+```xml
+  <ItemGroup>
+    <None Remove="TestData\testData.json" />
+    <EmbeddedResource Include="TestData\testData.json" />
+  </ItemGroup>
+```
 
 How to use:
 
-``` CSharp
+``` Csharp
 const string fileName = "testData.json";
 var dataStream = Assembly.GetExecutingAssembly().GetEmbeddedResourceStream($"TestData.{fileName}");
 var data = await BinaryData.FromStreamAsync(dataStream);
