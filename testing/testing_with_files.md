@@ -22,10 +22,10 @@ public static Stream GetEmbeddedResourceStream(this Assembly assembly, string re
 ```
 Add files as embedded resources:
 ```xml
-  <ItemGroup>
-    <None Remove="TestData\data.json" />
-    <EmbeddedResource Include="TestData\data.json" />
-  </ItemGroup>
+<ItemGroup>
+  <None Remove="TestData\data.json" />
+  <EmbeddedResource Include="TestData\data.json" />
+</ItemGroup>
 ```
 
 How to use:
