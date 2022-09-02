@@ -30,8 +30,8 @@ Add files as embedded resources:
 
 How to use:
 
-``` Csharp
+```Csharp
 const string fileName = "data.json";
-var dataStream = Assembly.GetExecutingAssembly().GetEmbeddedResourceStream($"TestData.{fileName}");
-var data = await BinaryData.FromStreamAsync(dataStream);
+Stream dataStream = Assembly.GetExecutingAssembly().GetEmbeddedResourceStream($"TestData.{fileName}");
+BinaryData data = await BinaryData.FromStreamAsync(dataStream);
 ```
