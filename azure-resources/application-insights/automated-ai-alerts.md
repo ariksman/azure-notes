@@ -1,7 +1,7 @@
 ## Create alerts via Bicep
 
 It is possible to automate alert deployment with `bicep`. This leverages the `Microsoft.Insights/scheduledQueryRules@2018-04-16` and custom AI query.
-To store info for the alerts `TelemetryCleint` can be used in a following way:
+To store info for the alerts `TelemetryClient` can be used in a following way:
 
 ``` CSharp
 // Trigger alert by logging a custom event in AppInsights
