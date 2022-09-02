@@ -62,3 +62,7 @@ All notes related to Azure, C#, react and devOps.
 
 ## TypeScript
 [Direct link to TypeScript docs](https://www.typescriptlang.org/docs/)
+
+## Testing
+
+[How to use files as test data sources](testing/testing_with_files.md)
