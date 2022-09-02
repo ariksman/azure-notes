@@ -15,6 +15,7 @@ public static Stream GetEmbeddedResourceStream(this Assembly assembly, string re
     if (stream is null)
     {
         throw new ArgumentException($"The specified embedded resource \"{relativeResourcePath}\" is not found.");
+    }
     
     return stream;
 }
