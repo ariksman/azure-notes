@@ -71,3 +71,6 @@ Result
     }
 ]
 ```
+
+# Microsoft documentation - SQL API
+[Getting started with SQL queries](https://learn.microsoft.com/en-us/azure/cosmos-db/sql/sql-query-getting-started)
