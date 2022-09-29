@@ -43,6 +43,10 @@ All notes related to Azure, C#, react and devOps.
 
 [Register Azure SDK clients for ASP.NET Core app](common/azure-sdk-clients.md)
 
+## CosmosDb
+
+[How to query CosmosDb with SQL syntax](cosmosDb/sql_query.md)
+
 ## Microsoft Graph API
 
 [Create Graph API client](sharp/create_graph_client.md)
