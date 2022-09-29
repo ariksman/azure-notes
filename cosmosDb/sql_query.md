@@ -31,7 +31,7 @@ JOIN t IN c.Attributes
 WHERE LENGTH(t['Value']) > 2000
 ```
 Result:
-``` Json
+```
 [
     {
         "Name": "10451164",
