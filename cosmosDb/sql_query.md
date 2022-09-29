@@ -1,5 +1,7 @@
 
-# How to query Azure cosmosDb with main document filtering
+# CosmosDb SQL API
+
+## How to query Azure cosmosDb with main document filtering
 
 The source document is in following format:
 ``` Json
@@ -24,7 +26,7 @@ The source document is in following format:
 ```
 
 Query syntax to filter based on main document attribute
-```
+``` sql
 SELECT c.Name, c.Revision, c.Type, LENGTH(t['Value']) AS AttributeValueLenght
 FROM c
 JOIN t IN c.Attributes
@@ -48,8 +50,8 @@ Result:
     ...
 ]
 ```
-How to query or filter based on array value:
-```
+## How to query or filter based on array value:
+``` sql
 SELECT 
     c.Name,
     LENGTH(c['Value'])
