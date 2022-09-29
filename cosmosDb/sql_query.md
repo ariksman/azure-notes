@@ -25,7 +25,7 @@ The source document is in following format:
 
 Query syntax to filter based on main document attribute
 ```
-SELECT c.Name, c.Revision, c.Type, LENGTH(t['Value']) AS ValueLenght
+SELECT c.Name, c.Revision, c.Type, LENGTH(t['Value']) AS AttributeValueLenght
 FROM c
 JOIN t IN c.Attributes
 WHERE LENGTH(t['Value']) > 2000
@@ -37,13 +37,13 @@ Result:
         "Name": "10451164",
         "Revision": "1",
         "Type": "Component",
-        "ValueLenght": 2014
+        "AttributeValueLenght": 2014
     },
     {
         "Name": "10451164",
         "Revision": "1",
         "Type": "Component",
-        "ValueLenght": 2014
+        "AttributeValueLenght": 2014
     },
     ...
 ]
