@@ -56,3 +56,18 @@ SELECT
 FROM c IN c.Attributes
 WHERE LENGTH(c['Value']) > 2000
 ```
+
+## How to count all documents within container
+
+Counting example with property filtering
+```
+SELECT count(1) FROM c WHERE c.DocumentType = 'Item'
+```
+Result
+```
+[
+    {
+        "$1": 1234567890
+    }
+]
+```
