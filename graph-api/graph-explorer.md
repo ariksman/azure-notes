@@ -2,7 +2,7 @@
 
 [Link to graph-explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
 
-Sometimes it is difficult to find what is behinf pipeline errors `object-id`, for example what is the display name of a service connections. 
+Sometimes it is difficult to find what is behind pipeline errors `object-id`, for example what is the display name of a service connections. 
 Therefore it was handy to utilize the graph-explorer for this task. 
 
 First I wanted to find out what is the individual service principal name based on object id:
