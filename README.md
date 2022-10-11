@@ -53,6 +53,8 @@ All notes related to Azure, C#, react and devOps.
 
 [Permissions](graph-api/permissions.md)
 
+[Graph Explorer tips](graph-api/graph-explorer.md)
+
 ## C#
 
 [Batch items](sharp/batch.md)
