@@ -1,1 +1,25 @@
 # Azure SQL
+
+```sql
+DECLARE @count AS INT = 1
+WHILE(@count > 0)
+BEGIN 
+ BEGIN TRANSACTION TDelete
+    
+    ;WITH CTE AS
+    (
+    SELECT TOP(100000) *
+    FROM [DATABASE_TABLE]
+    WHERE [FILTER_CONSIDITON]
+    )
+    DELETE FROM CTE
+
+ COMMIT TRANSACTION TDelete
+ 
+ SELECT @count = COUNT(1) 
+ FROM [DATABASE_TABLE]
+ 
+ PRINT 'DELETED 100 000 -> '+ CONVERT(VARCHAR(10),@count) + ' REMAINING'
+END;
+```
+
