@@ -51,3 +51,22 @@ exceptions
 | where id == 3001 or id == 2001 or id == 1001
 ```
 
+### KQL - How to search with message template
+
+If logging is done in the following way via the code:
+``` CSharp
+log.LogInformation(
+    "Completed to import {ItemCount} from files: {@JsonFileNames}, for archive: {FileName}",
+     result.Count, fileNames, input.BlobName);
+```
+
+then you can search by using the message template in following way:
+``` Kusto
+traces
+| where timestamp > ago(10d)
+| where operation_Name  == 'NameOfTheOrchestrator'
+| extend messageTemplate = customDimensions["prop__{OriginalFormat}"]
+| where messageTemplate == 'Completed to import {ItemCount} from files: {@JsonFileNames}, for archive: {FileName}'
+| order by timestamp asc
+```
+
