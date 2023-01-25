@@ -15,6 +15,8 @@ All notes related to Azure, C#, react and devOps.
 
 [Delete a large quantity of items](azure-sql/azure-sql.md)
 
+[ConnectionStrings](azure-sql/connectionstring.md)
+
 ## Azure.Identity
 
 [Tips how to use the Azure.Identity package](azure-identity/identity-package-usage-tips.md)
