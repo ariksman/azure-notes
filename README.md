@@ -78,3 +78,8 @@ All notes related to Azure, C#, react and devOps.
 ## Testing
 
 [How to use files as test data sources](testing/testing_with_files.md)
+
+## Python - Jyputer Notebook
+
+[Access Azure Storage Account](python/jupyter-notebook/storage-account.md)
+
