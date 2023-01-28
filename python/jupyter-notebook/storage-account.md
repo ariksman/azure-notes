@@ -33,12 +33,8 @@ for blob in blobs:
 ## Data lake Gen2 access
 
 ```python
-from azure.identity import ClientSecretCredential, ManagedIdentityCredential
-from azure.storage.blob import BlobServiceClient
-import os, uuid, sys
+from azure.identity import ClientSecretCredential
 from azure.storage.filedatalake import DataLakeServiceClient
-from azure.core._match_conditions import MatchConditions
-from azure.storage.filedatalake._models import ContentSettings
 
 def initialize_storage_account_ad(storage_account_name, client_id, client_secret, tenant_id):
     
