@@ -1,13 +1,26 @@
-# Inpecting traffic with Wireshark + Mitmproxy
+# Inspecting traffic with Wireshark + Mitmproxy
 
 After installation of both Mitmproxy and wireshark, its easy to setup the startup with environmental variables via script
 ```shell
 @echo off
-set MITMPROXY_SSLKEYLOGFILE=C:\Users\{UerName}\.mitmproxy\sslkeylogfile.txt
+set MITMPROXY_SSLKEYLOGFILE=C:\Users\{UserName}\.mitmproxy\sslkeylogfile.txt
 start mitmproxy
 ```
+The certificate process available via documentation: https://docs.mitmproxy.org/stable/overview-getting-started/
 
-Then setup windows to use proxy at `127.0.0.1:8080`
+After certificate setup is ready configure Windows to use proxy at `127.0.0.1:8080`
+
+<img src="win_proxy.png" width="300" />
 
 After this setup Wireshark TLS settings to use the same `sslkeylogfile.txt` for decrypting the traffic.
 
+<img src="mitmproxy.png" width="1024" />
+
+## Wireshark filtering
+
+Usefull filtering methods for wireshark:
+
+```
+http.host == "*.azure-api.net"
+http.request.method == "GET" or http.request.method == "POST"
+```
