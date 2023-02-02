@@ -30,7 +30,7 @@ for blob in blobs:
     print(blob.name)
 ```
 
-## Data lake Gen2 access
+## Data lake Gen2 access utility functions
 
 ```python
 from azure.identity import ClientSecretCredential
@@ -60,6 +60,39 @@ def initialize_storage_account(storage_account_name, storage_account_key):
     except Exception as e:
         print(e)
 
+def list_directory_contents(file_system_name, directory_path):
+    try:
+        
+        file_system_client = datalake_service_client.get_file_system_client(file_system=file_system_name)
+
+        paths = file_system_client.get_paths(path=directory_path)
+
+        return list(paths)
+
+    except Exception as e:
+     print(e)
+
+def download_file_from_directory(file_system_name, directory_path, file_path):
+    try:
+        file_system_client = datalake_service_client.get_file_system_client(file_system=file_system_name)
+        directory_client = file_system_client.get_directory_client(directory_path)
+        file_client = directory_client.get_file_client(file_path)
+
+        download = file_client.download_file()
+        file_content = download.readall().decode("utf-8")
+
+        return file_content
+
+    except Exception as e:
+     print(e)
+ ```
+ 
+ Download files and store them into Pandas DataFrame
+ 
+```python
+import pandas as pd
+import json
+
 # Create a DataLakeServiceClient object
 account_name = '{Account_Name}'
 account_key = '{Account_Key}'
@@ -70,4 +103,26 @@ file_systems = datalake_service_client.list_file_systems()
 
 for file_system in file_systems:
     print(file_system.name)
+
+gateway = "{Container_Name}"
+directory = "{Directory_Within_Data_Lake}"
+
+files = list_directory_contents(gateway, directory)
+
+# List to store each file's data
+data = []
+
+for filePath in files:
+        file_content = download_file_from_directory(gateway, directory, filePath)
+        # Check if the file is a JSON file
+        if filePath.name.endswith(".json"):
+            # Load the contents of the file into a dictionary
+            file_data = json.loads(file_content)
+            data.append(file_data)
+
+# Create a DataFrame from the data
+df = pd.DataFrame(data)
+df.head()
 ```
+
+
