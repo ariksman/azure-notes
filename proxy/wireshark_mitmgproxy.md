@@ -9,7 +9,7 @@ start mitmproxy
 ```
 The documentation for the certificate process is available at: https://docs.mitmproxy.org/stable/overview-getting-started/
 
-After certificate setup is ready configure Windows to use proxy at `127.0.0.1:8080`
+After certificate setup is ready, configure Windows to use proxy at `127.0.0.1:8080`
 
 <img src="win_proxy.png" width="300" />
 
