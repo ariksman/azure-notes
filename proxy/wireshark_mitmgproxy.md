@@ -13,13 +13,21 @@ After certificate setup is ready configure Windows to use proxy at `127.0.0.1:80
 
 <img src="win_proxy.png" width="300" />
 
-After this setup Wireshark TLS settings to use the same `sslkeylogfile.txt` for decrypting the traffic.
+After this, setup Wireshark TLS settings to use the same `sslkeylogfile.txt` for decrypting the traffic.
 
 <img src="wireshark_settings.png" width="400" />
 
 View of the proxy window
 
 <img src="mitmproxy.png" width="1024" />
+
+To start listening the `127.0.0.1` with wireshark, select right interface at the startup
+
+<img src="wireshark_capture_settings.png" width="400" />
+
+And if everything is correctly setup, all traffic should be visible in the wireshark
+
+<img src="wireshark_view.png" width="1024" />
 
 ## Wireshark filtering
 
