@@ -25,7 +25,7 @@ To start listening the `127.0.0.1` with wireshark, select right interface at the
 
 <img src="wireshark_capture_settings.png" width="400" />
 
-And if everything is correctly setup, all traffic should be visible in the wireshark
+And if everything is configured correctly, all traffic should be visible in the wireshark
 
 <img src="wireshark_view.png" width="1024" />
 
