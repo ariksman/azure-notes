@@ -117,13 +117,13 @@ files = list_directory_contents(gateway, directory)
 data = []
 
 for filePath in files:
-        file_content = download_file_from_directory(gateway, directory, filePath)
-        # Check if the file is a JSON file
-        if filePath.name.endswith(".json"):
-            # Load the contents of the file into a dictionary
-            file_data = json.loads(file_content)
-            # Add json file content into array
-            data.append(file_data)
+    file_content = download_file_from_directory(gateway, directory, filePath)
+    # Check if the file is a JSON file
+    if filePath.name.endswith(".json"):
+        # Load the contents of the file into a dictionary
+        file_data = json.loads(file_content)
+        # Add json file content into array
+        data.append(file_data)
 
 # Create a DataFrame from the data array
 df: pd.DataFrame = pd.DataFrame(data)
