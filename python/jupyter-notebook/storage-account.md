@@ -1,5 +1,5 @@
 
-# Access the data stored in storage account with `Jupyter Notebook` 
+# Access the data stored in storage account (Data Lake Gen2) with `Jupyter Notebook` 
 
 ## BlobServiceClient example
 
@@ -32,7 +32,7 @@ for blob in blobs:
     print(blob.name)
 ```
 
-## Data lake Gen2 access with DataLAkeServiceClient
+## DataLakeServiceClient example
 
 Utility functions to access the Data Lake Gen2
 
