@@ -87,7 +87,7 @@ def download_file_from_directory(file_system_name, directory_path, file_path):
      print(e)
  ```
  
- Download files and store them into Pandas DataFrame
+ Download all files within Data Lake Gen2 directory and read them into Pandas Data Frame
  
 ```python
 import pandas as pd
