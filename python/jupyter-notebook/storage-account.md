@@ -109,7 +109,7 @@ directory = "{Directory_Within_Data_Lake}"
 
 files = list_directory_contents(gateway, directory)
 
-# List to store each file's data
+# List to store each json-file's data
 data = []
 
 for filePath in files:
@@ -118,9 +118,10 @@ for filePath in files:
         if filePath.name.endswith(".json"):
             # Load the contents of the file into a dictionary
             file_data = json.loads(file_content)
+            # Add json file content into array
             data.append(file_data)
 
-# Create a DataFrame from the data
+# Create a DataFrame from the data array
 df = pd.DataFrame(data)
 df.head()
 ```
