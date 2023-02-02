@@ -1,6 +1,7 @@
 # Inspecting traffic with Wireshark + Mitmproxy
 
-After installation of both Mitmproxy and wireshark, its easy to setup the startup with environmental variables via script
+After installation of both Mitmproxy and wireshark, its easy to setup the startup with environmental variables via script. Save the following code snippet for example as `start_mitmproxy.cmd` on desktop folder.
+
 ```shell
 @echo off
 set MITMPROXY_SSLKEYLOGFILE=C:\Users\{UserName}\.mitmproxy\sslkeylogfile.txt
