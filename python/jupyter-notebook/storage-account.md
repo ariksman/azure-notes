@@ -40,7 +40,7 @@ Utility functions to access the Data Lake Gen2
 from azure.identity import ClientSecretCredential
 from azure.storage.filedatalake import DataLakeServiceClient
 
-def initialize_storage_account_ad(storage_account_name, client_id, client_secret, tenant_id):
+def initialize_storage_account_ad(storage_account_name: str, client_id: str, client_secret: str, tenant_id: str):
     
     try:  
         global datalake_service_client
@@ -53,7 +53,7 @@ def initialize_storage_account_ad(storage_account_name, client_id, client_secret
     except Exception as e:
         print(e)
 
-def initialize_storage_account(storage_account_name, storage_account_key):
+def initialize_storage_account(storage_account_name: str, storage_account_key: str):
     
     try:  
         global datalake_service_client
@@ -64,7 +64,7 @@ def initialize_storage_account(storage_account_name, storage_account_key):
     except Exception as e:
         print(e)
 
-def list_directory_contents(file_system_name, directory_path):
+def list_directory_contents(file_system_name: str, directory_path: str) -> list|None:
     try:
         
         file_system_client = datalake_service_client.get_file_system_client(file_system=file_system_name)
@@ -76,7 +76,7 @@ def list_directory_contents(file_system_name, directory_path):
     except Exception as e:
      print(e)
 
-def download_file_from_directory(file_system_name, directory_path, file_path):
+def download_file_from_directory(file_system_name: str, directory_path: str, file_path: str) -> str:
     try:
         file_system_client = datalake_service_client.get_file_system_client(file_system=file_system_name)
         directory_client = file_system_client.get_directory_client(directory_path)
@@ -108,8 +108,8 @@ file_systems = datalake_service_client.list_file_systems()
 for file_system in file_systems:
     print(file_system.name)
 
-gateway = "{Container_Name}"
-directory = "{Directory_Within_Data_Lake}"
+gateway = "gateways"
+directory = "/Metrics/DeviceIotData/"
 
 files = list_directory_contents(gateway, directory)
 
@@ -126,7 +126,7 @@ for filePath in files:
             data.append(file_data)
 
 # Create a DataFrame from the data array
-df = pd.DataFrame(data)
+df: pd.DataFrame = pd.DataFrame(data)
 df.head()
 ```
 
