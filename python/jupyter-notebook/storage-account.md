@@ -1,5 +1,5 @@
 
-# Access the data stored in storage account (Data Lake Gen2) with `Jupyter Notebook` 
+# Access data stored in storage account (Data Lake Gen2) with `Jupyter Notebook` 
 
 ## BlobServiceClient example
 
