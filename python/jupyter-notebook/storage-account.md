@@ -1,6 +1,8 @@
 
 # Access the data stored in storage account with `Jupyter Notebook` 
 
+## BlobServiceClient example
+
 In case of missing dependencies, install:
 ```shell
 pip install azure-storage-blob
@@ -30,7 +32,9 @@ for blob in blobs:
     print(blob.name)
 ```
 
-## Data lake Gen2 access utility functions
+## Data lake Gen2 access with DataLAkeServiceClient
+
+Utility functions to access the Data Lake Gen2
 
 ```python
 from azure.identity import ClientSecretCredential
@@ -87,7 +91,7 @@ def download_file_from_directory(file_system_name, directory_path, file_path):
      print(e)
  ```
  
- Download all files within Data Lake Gen2 directory and read them into Pandas Data Frame
+ Implementation to download all files within Data Lake Gen2 directory and read them into Pandas Data Frame
  
 ```python
 import pandas as pd
