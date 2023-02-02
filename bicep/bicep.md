@@ -1,4 +1,4 @@
-# <img src="azureBicep.png" width="60" /> Bicep
+# <img src="azureBicep.png" width="30" /> Bicep
 
 - [Discussion available at public bicep github](https://github.com/Azure/bicep)
 - [Most recent community calls available at youtube](https://www.youtube.com/channel/UCZZ3-oMrVI5ssheMzaWC4uQ/videos)
@@ -34,7 +34,7 @@ Service response to the `listKeys` function is following:
 
 To access and store these secrets into keyvault use the following:
 
-```
+```bicep
 resource pubSubConnectionString 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = if (!empty(naming.webPubSub)) {
   name: '${keyVault.name}/AzurePubSub--ConnectionString'
   properties: {
