@@ -108,8 +108,8 @@ file_systems = datalake_service_client.list_file_systems()
 for file_system in file_systems:
     print(file_system.name)
 
-gateway = "gateways"
-directory = "/Metrics/DeviceIotData/"
+gateway = "{Container_Name}"
+directory = "{Directory_Path}"
 
 files = list_directory_contents(gateway, directory)
 
