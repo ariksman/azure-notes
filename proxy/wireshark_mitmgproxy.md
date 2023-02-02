@@ -7,7 +7,7 @@ After installation of both Mitmproxy and wireshark, its easy to setup the startu
 set MITMPROXY_SSLKEYLOGFILE=C:\Users\{UserName}\.mitmproxy\sslkeylogfile.txt
 start mitmproxy
 ```
-The certificate process available via documentation: https://docs.mitmproxy.org/stable/overview-getting-started/
+The documentation for the certificate process is available at: https://docs.mitmproxy.org/stable/overview-getting-started/
 
 After certificate setup is ready configure Windows to use proxy at `127.0.0.1:8080`
 
