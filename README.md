@@ -83,3 +83,6 @@ All notes related to Azure, C#, react and devOps.
 
 [Access Azure Storage Account](python/jupyter-notebook/storage-account.md)
 
+[Acquire token with confidential client](python/jupyter-notebook/confidential_client.md)
+
+
