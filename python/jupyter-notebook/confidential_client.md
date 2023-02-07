@@ -3,6 +3,12 @@
 It is possible to fetch a token from App Registration and use this token to access other resources:
 
 ```Python
+# Requirements
+pip install msal 
+```
+
+
+```Python
 import msal
 
 # Replace these placeholders with your own values
