@@ -15,3 +15,22 @@ PS > [System.Convert]::ToBase64String($fileContentBytes) | Out-File 'pfx-encoded
 
 This can be stored as a string into the projects user-secrets.
 
+The same can be achieved with Python script:
+
+```Python
+import base64
+import os
+print(os.getcwd())
+
+# Read the contents of the PFX file as bytes
+with open('<name-of-the-cert.pfx>', 'rb') as f:
+    file_content_bytes = f.read()
+
+# Convert the bytes to a base64-encoded string
+base64_encoded_bytes = base64.b64encode(file_content_bytes).decode()
+
+# Write the base64-encoded string to a file
+with open('pfx-encoded-bytes.txt', 'w') as f:
+    f.write(base64_encoded_bytes)
+```
+
