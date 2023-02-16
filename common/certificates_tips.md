@@ -3,7 +3,7 @@
 
 To quickly debug locally the certificate, the **user-secrets** can be leveraged with the base64 encoded string version of the cert-file.
 
-## Method 1: Obtain cert string value
+## Method 1: Obtain cert string value with PowerShell
 
 Following commands extract the `string` value and store it within a txt-file.
 [get-content](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.2):
@@ -14,6 +14,8 @@ PS > [System.Convert]::ToBase64String($fileContentBytes) | Out-File 'pfx-encoded
 ```
 
 This can be stored as a string into the projects user-secrets.
+
+## Method 2: Obtain cert string value with Python
 
 The same can be achieved with Python script:
 
