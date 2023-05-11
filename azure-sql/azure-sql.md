@@ -10,6 +10,10 @@ To enable managed identity we have to grant following rights:
 CREATE USER [{app-service-name}] FROM EXTERNAL PROVIDER;
 EXEC sp_addrolemember 'db_datareader','{app-service-name}';
 EXEC sp_addrolemember 'db_datawriter','{app-service-name}';
+-- For app service staging slot
+CREATE USER [{app-service-name}] FROM EXTERNAL PROVIDER;
+EXEC sp_addrolemember 'db_datareader','{app-service-name/slots/staging}';
+EXEC sp_addrolemember 'db_datawriter','{app-service-name/slots/staging}';
 -- For function app
 CREATE USER [{functions-app-name}] FROM EXTERNAL PROVIDER;
 EXEC sp_addrolemember 'db_datareader','{functions-app-name}';
