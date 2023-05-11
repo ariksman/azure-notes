@@ -79,6 +79,28 @@ db_datawriter    {app-service-name}
 db_datawriter    {functions-app-name}
 ```
 
+## Delete database via Azure DAta Studio
+
+This can be done by executing a T-SQL script that kills any active connections, and then using the DROP DATABASE statement to delete the database.
+
+Run the following query on database:
+```SQL
+USE master;
+GO
+
+DECLARE @DatabaseName NVARCHAR(50) = N'YourDatabaseName';
+
+DECLARE @Sql NVARCHAR(MAX) = N'';
+
+SELECT @Sql = @Sql + N'KILL ' + CONVERT(NVARCHAR(10), session_id) + N';'
+FROM sys.dm_exec_sessions
+WHERE database_id = DB_ID(@DatabaseName);
+
+EXEC sp_executesql @Sql;
+
+DROP DATABASE [YourDatabaseName];
+```
+
 ## Delete large amounts of data
 
 ```SQL
