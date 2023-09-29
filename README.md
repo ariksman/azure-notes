@@ -65,6 +65,9 @@ All notes related to Azure, C#, react and devOps.
 
 [Batch items](sharp/batch.md)
 
+## Key vault
+
+[Configure role-based access](keyvault/configure_rbac_Access.md)
 
 ## React.js
 
